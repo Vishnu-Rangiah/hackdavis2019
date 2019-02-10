@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/nameTextView"
@@ -9,11 +10,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="33dp"
         android:text="Name"
-        android:textSize="24sp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/ingrdTextView"
@@ -22,9 +23,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="77dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="110dp"
         android:text="ingrd" />
 
     <TextView
@@ -34,9 +35,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginRight="47dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginRight="117dp"
         android:text="Cals"
         android:textSize="12sp" />
 
@@ -47,9 +48,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="343dp"
-        android:layout_marginLeft="343dp"
-        android:layout_marginTop="98dp"
+        android:layout_marginStart="346dp"
+        android:layout_marginLeft="346dp"
+        android:layout_marginTop="61dp"
         android:text="Carbs"
         android:textSize="12sp" />
 
@@ -60,9 +61,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="341dp"
-        android:layout_marginLeft="341dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginStart="348dp"
+        android:layout_marginLeft="348dp"
+        android:layout_marginTop="23dp"
         android:text="Fat"
         android:textSize="12sp" />
 
@@ -73,9 +74,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="342dp"
-        android:layout_marginLeft="342dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="262dp"
+        android:layout_marginLeft="262dp"
+        android:layout_marginTop="63dp"
         android:text="Protein"
         android:textSize="12sp" />
 </RelativeLayout>

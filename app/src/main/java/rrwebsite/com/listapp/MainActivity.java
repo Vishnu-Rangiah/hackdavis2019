@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     ListView myListView;
-    String[] items;
-    String[] calories;
-    String[] descriptions;
+    //String[] items;
+    //String[] calories;
+   // String[] descriptions;
 
     List<Food> foodList;
 
@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+        final ItemAdapter itemAdapter = new ItemAdapter(this,foodList);
         String url = "http://hackdavis.cswhite2000.net/nutrition/";
 
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-                        }
+                        }  itemAdapter.updateFoodList(foodList);
                     }
                 }, new Response.ErrorListener() {
 
@@ -89,23 +91,23 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        Resources res = getResources();
+        //Resources res = getResources();
         myListView = (ListView) findViewById(R.id.myListView);
-        items = res.getStringArray(R.array.items);
-        calories = res.getStringArray(R.array.calories);
-        descriptions = res.getStringArray(R.array.descriptions);
+        //items = res.getStringArray(R.array.items);
+        //calories = res.getStringArray(R.array.calories);
+        //descriptions = res.getStringArray(R.array.descriptions);
 
-        ItemAdapter itemAdapter = new ItemAdapter(this,items,calories,descriptions);
+
         myListView.setAdapter(itemAdapter);
 
-        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent showDetailActivity = new Intent(getApplicationContext(), DetailActivity.class);
-                showDetailActivity.putExtra("rrwebsite.com.listapp.ITEM_INDEX", i);
-                startActivity(showDetailActivity);
-            }
-        });
+       // myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+           // @Override
+        //    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        //        Intent showDetailActivity = new Intent(getApplicationContext(), DetailActivity.class);
+               // showDetailActivity.putExtra("rrwebsite.com.listapp.ITEM_INDEX", i);
+        //        startActivity(showDetailActivity);
+        //    }
+       // });
 
 
 
