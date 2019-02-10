@@ -56,6 +56,7 @@ public class ItemAdapter extends BaseAdapter {
         ingrdTextView.setText(ingrd);
         calsTextView.setText(cals);
 
+
         return v;
     }
 }
