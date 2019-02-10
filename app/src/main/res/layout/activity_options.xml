@@ -25,7 +25,7 @@
         app:srcCompat="@drawable/logo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/menubutton"
         android:layout_width="315dp"
         android:layout_height="61dp"
         android:text="Today's Menu"
@@ -33,7 +33,7 @@
         tools:layout_editor_absoluteY="213dp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/optionsEditText"
         android:layout_width="303dp"
         android:layout_height="56dp"
         android:ems="10"
@@ -47,7 +47,7 @@
         app:layout_constraintVertical_bias="0.573" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/filterButton"
         android:layout_width="309dp"
         android:layout_height="wrap_content"
         android:text="Meal by filter"

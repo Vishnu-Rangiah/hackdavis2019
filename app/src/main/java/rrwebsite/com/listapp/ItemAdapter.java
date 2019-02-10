@@ -81,14 +81,14 @@ public class ItemAdapter extends BaseAdapter {
 
         nameTextView.setText(name);
         ingrdTextView.setText(ingrd);
-        calsTextView.setText("c:"+toString(cals));
-        fatsTextView.setText("f:"+toString(fats));
-        proteinsTextView.setText("p:"+toString(proteins));
-        carbTextView.setText("crb:"+toString(carb));
-        //calsTextView.setText(toString(cals));
-        //fatsTextView.setText(toString(fats));
-        //proteinsTextView.setText(toString(proteins));
-        //carbTextView.setText(toString(carb));
+        //calsTextView.setText("c:"+toString(cals));
+        //fatsTextView.setText("f:"+toString(fats));
+        //proteinsTextView.setText("p:"+toString(proteins));
+        //carbTextView.setText("crb:"+toString(carb));
+        calsTextView.setText(toString(cals));
+        fatsTextView.setText(toString(fats));
+        proteinsTextView.setText(toString(proteins));
+        carbTextView.setText(toString(carb));
 
 
         return v;
