@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ListApp</string>
+
+    <string-array name="items">
+        <item>pizza</item>
+        <item>burger</item>
+        <item>salad</item>
+        <item>rice bowl</item>
+    </string-array>
+
+    <string-array name="calories">
+        <item>1400</item>
+        <item>2000</item>
+        <item>700</item>
+        <item>1100</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>Cheese, flour, tomato</item>
+        <item>wheat, beef, cheese</item>
+        <item>kale, dairy</item>
+        <item>rice, chicken, carrots</item>
+    </string-array>
+
+
+</resources>
