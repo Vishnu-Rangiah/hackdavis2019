@@ -34,8 +34,48 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:text="Cals" />
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:text="Cals"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/carbsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="343dp"
+        android:layout_marginLeft="343dp"
+        android:layout_marginTop="98dp"
+        android:text="Carbs"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/fattextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="341dp"
+        android:layout_marginLeft="341dp"
+        android:layout_marginTop="53dp"
+        android:text="Fat"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/proteinTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="342dp"
+        android:layout_marginLeft="342dp"
+        android:layout_marginTop="76dp"
+        android:text="Protein"
+        android:textSize="12sp" />
 </RelativeLayout>
