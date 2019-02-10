@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class OptionsActivity extends AppCompatActivity {
 
@@ -30,7 +31,10 @@ public class OptionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //still have to Options activity ready
+                EditText options = (EditText) findViewById(R.id.optionsEditText);
+                String chosenOption = options.getText().toString();
                 Intent startIntentfil = new Intent(getApplicationContext(),ListActivity.class);
+                startIntentfil.putExtra("YOURSTRING",chosenOption);
                 startActivity(startIntentfil);
             }
         });

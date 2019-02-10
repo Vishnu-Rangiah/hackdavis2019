@@ -17,6 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ListActivity extends AppCompatActivity {
@@ -27,6 +28,14 @@ public class ListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        String optionC = null;
+
+        if(getIntent().hasExtra("YOURSTRING")){
+            optionC = getIntent().getExtras().getString("YOURSTRING");
+        }
+
+        final String optionD = optionC != null ? optionC : "";
 
 
         final ItemAdapter itemAdapter = new ItemAdapter(this,foodList);
@@ -61,7 +70,24 @@ public class ListActivity extends AppCompatActivity {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-                        }  itemAdapter.updateFoodList(foodList);
+                        }
+
+                        foodList.sort(new Comparator<Food>() {
+                            @Override
+                            public int compare(Food food1, Food food2) {
+                                if (optionD.toLowerCase().equals("calories")) {
+                                    return (int)(food2.calories - food1.calories);
+                                } else if (optionD.toLowerCase().equals("carbs")) {
+                                    return (int)(food2.carbs - food1.carbs);
+                                } else if (optionD.toLowerCase().equals("protein")) {
+                                    return (int)(food2.protein - food1.protein);
+                                }
+
+                                return food1.name.compareTo(food2.name);
+                            }
+                        });
+
+                        itemAdapter.updateFoodList(foodList);
                     }
                 }, new Response.ErrorListener() {
 
