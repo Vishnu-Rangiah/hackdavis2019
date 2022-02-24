@@ -37,10 +37,11 @@ public class ListActivity extends AppCompatActivity {
 
         final String optionD = optionC != null ? optionC : "";
 
+        String today_date = "Wednesday, February 23, 2022";
 
         final ItemAdapter itemAdapter = new ItemAdapter(this,foodList);
-        String url = "http://hackdavis.cswhite2000.net/nutrition/";
-
+//        String url = "http://hackdavis.cswhite2000.net/nutrition/";
+        String url = "https://raw.githubusercontent.com/Davis-Data-Science-Club/winter_proj/master/tercero.json";
         RequestQueue queue = Volley.newRequestQueue(this);
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
@@ -63,9 +64,14 @@ public class ListActivity extends AppCompatActivity {
                                 food.fat = jsonObject.getDouble("Fat");
                                 food.protein =jsonObject.getDouble("Protein");
 
-                                foodList.add(food);
+                                if(jsonObject.getString("Date").equals("Wednesday, February 23, 2022")){
+                                    Log.w("Date", jsonObject.getString("Date"));
+                                    foodList.add(food);
+                                }
+                                else{Log.w("Pass", food.name);
+                                }
 
-                                Log.w("food", food.toString());
+//                                Log.w("food", food.toString());
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -107,8 +113,6 @@ public class ListActivity extends AppCompatActivity {
 
         myListView = (ListView) findViewById(R.id.myListViews);
 
-
-
         myListView.setAdapter(itemAdapter);
 
         //once clicked the items -- provide more information
@@ -120,9 +124,6 @@ public class ListActivity extends AppCompatActivity {
         //        startActivity(showDetailActivity);
         //    }
         // });
-
-
-
 
     }
 }
